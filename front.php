@@ -45,6 +45,8 @@ class Nmax_Report_Errors_Front extends Nmax_Report_Errors {
 	 * @return bool
 	 */
 	public function is_appropriate_post() {
+		if(in_array('get_the_excerpt', $GLOBALS['wp_current_filter'])) return false;
+		
 		if((is_single() && in_array(get_post_type(), $this->options['post_types']))
 		    || (is_page() && in_array('page', $this->options['post_types'])))
 		{
