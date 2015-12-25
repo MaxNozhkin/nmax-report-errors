@@ -1,10 +1,10 @@
 <?php
 
-if (!class_exists('WP_List_Table')) {
-	require_once ABSPATH . 'wp-admin/includes/class-wp-list-table.php';
+if (!class_exists('Nmax_WP_List_Table')) {
+	require_once __DIR__ . '/nmax-wp-list-table.php';
 }
 
-class report_Error_Table extends WP_List_Table {
+class report_Error_Table extends Nmax_WP_List_Table {
 
 	public $per_page = 15;
 	public $base_url;
